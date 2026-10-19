@@ -10,17 +10,14 @@ It also has a buzzer so it could play notes back.
 The current version of the project does not work because I couldn't get a critical component and failed to filter and amplify the signal from the microphone.
 The revised version is [here](https://github.com/k3idi/Pitch-Identifier-Revised).
 
-*picture of the board with the LCD saying "I don't work"*
+![Sections of the board](media/PI_BOARD_SOLDERED.PNG)
 
 ### Sections of the PCB
 
-*A picture of the PCB with the sections circled and numbered.*
-
-The design schematic and PCB files can be found [here](link).
+The design schematic and PCB files can be found [here](https://github.com/k3idi/Pitch-Identifier/tree/main/PCB%20design%20files).
 
 ![Sections of the board](media/BOARD.png)
 
-*Explain the sections, referring to them using the numbers.*
 
 #### 1. USB power and programming interface
 
@@ -42,9 +39,13 @@ There is a decoupling capacitor on the circuit's supply pin (C11).
 #### 3. Power switch
 
 This switch (SW3) has three states and is used to choose between power sources.
-If the switch is in the first position, then the device is supplied from USB.
+If the switch is in the first position, then the device is supplied by USB.
 If it is in the second position, then the power line is disconnected form either source.
-In the third position, it is supplied from two AA batteries.
+In the third position, it is supplied by two AA batteries.
+
+Battery-powered             |  USB-powered
+:-------------------------:|:-------------------------:
+![unsoldered](media/BOARD_W_BATTERY.jpg)  |  ![soldered](media/BOARD_W_USB.jpg)
 
 #### 4. Microcontroller
 
@@ -110,9 +111,11 @@ I implemented this amplification stage wrong.
 Instead of amplifying the amplitude of the signal, it amplifies it from 0V as you would a DC signal.
 However, the output of this stage could have been suitable for the ADC, had the previous amplification stage worked.
 
-### Photos of the board?
+### Photos of the board
 
-*Under title*: pictures of the board (before and after, lol)
+Unsoldered             |  Soldered
+:-------------------------:|:-------------------------:
+![unsoldered](media/PI_BOARD_UNSOLDERED.PNG)  |  ![soldered](media/PI_BOARD_SOLDERED.PNG)
 
 
 ### Mistakes and fixes
